@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { useAuthStore } from '@/store/auth'; // Asegúrate de que este es el nombre de tu store
+import { useAuthStore } from '../store/auth'; // Asegúrate de que este es el nombre de tu store
 
 
 const axiosInstance = axios.create({
-  baseURL: 'https://onrender.numerologia.com/api',
+  baseURL: 'http://localhost:3000/api',
   headers: {
     'Content-Type': 'application/json'
   }

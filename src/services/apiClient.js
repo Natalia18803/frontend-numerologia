@@ -1,4 +1,4 @@
-import axiosInstance from '@/plugins/axios';
+import axiosInstance from '../plugins/axios.js';
 
 /**
  * GET: Obtener recursos
