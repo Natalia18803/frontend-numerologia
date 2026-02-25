@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/auth'; // Asegúrate de que este es el no
 
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json'
   }
