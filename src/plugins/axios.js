@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { useAuthStore } from '../store/auth'; // Asegúrate de que este es el nombre de tu store
-
+import { useAuthStore } from '../store/auth';
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:3000',
@@ -9,7 +8,6 @@ const axiosInstance = axios.create({
   }
 });
 
-
 // Interceptor para añadir el header x-token en cada petición
 axiosInstance.interceptors.request.use(
   (config) => {
@@ -17,7 +15,6 @@ axiosInstance.interceptors.request.use(
     const token = authStore.token;
 
     if (token) {
-      // Configuramos el header personalizado solicitado
       config.headers['x-token'] = token;
     }
     return config;
